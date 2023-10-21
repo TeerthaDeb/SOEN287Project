@@ -1,0 +1,146 @@
+/* Import Font Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+.homepage {
+    
+   /* background: -webkit-linear-gradient(to bottom, #000000, #fff4ff);  /* Chrome 10-25, Safari 5.1-6 */
+   /* background: linear-gradient( #f6cbcb, #fa8a5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image:url("bodybg.jpg");
+    color: #dd0055;
+ 
+}
+.bodyLi {
+    background: rgb(255, 211, 240);
+    
+}
+.bodyprofil
+{
+background-color: rgb(255, 213, 236);
+}
+
+/* NavbarTop */
+.navbar-top {
+    background-color: #000000;
+    color: #0c0c0c;
+    box-shadow: 0px 4px 8px 0px rgb(231, 28, 109);
+    height: 70px;
+}
+p {
+    text-indent: 50px;
+  }
+    
+.title {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    position: absolute;
+    text-align: left;
+}
+
+.navbar-top ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 18px 50px 0 40px;
+}
+
+.navbar-top ul li {
+    float: left;
+}
+
+.navbar-top ul li a {
+    color: #f6ebeb;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.home{
+     color:#ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size:50px;
+    text-align: center; 
+    
+   
+     
+    
+}
+
+.home_pic{
+   
+    
+    background-size: 100%;
+    background-position: center;
+    height: 300px;
+
+}
+.Li{
+
+    color:rgb(16, 15, 15);
+   font-family: 'Roboto', sans-serif;
+    margin-top: 10px ;
+    text-align: center;  
+
+
+}
+#m{
+color:rgb(255, 209, 233);
+
+font-family: 'Pixelify Sans', sans-serif;
+
+    font-size:100px;
+   
+    text-shadow: #000000;
+    
+
+
+}
+
+.actions ul li{
+    float: left;
+    padding: 40px ;
+    border-right:1px solid #bbb;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+.actions ul li a {
+    text-align: center;
+    font-size:30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f9b5b5;
+    background-color: #000000;
+    background-size: 100px;
+}
+
+.key-gen input[type=submit]{
+   
+    color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    margin-top: 5px;
+  
+    background-color: #fc0000;
+    
+
+    
+
+}
+.key-gen input[ type=text]{
+ 
+}
+#SoftwareTitle{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+
+    color: #131111;
+}.key-gen{
+    float:left;
+}
+
+.profil{
+   
+   padding-left: 2%
+    
+}
