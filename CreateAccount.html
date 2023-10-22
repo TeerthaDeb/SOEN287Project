@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Create Account</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button id="Home_button"><a href="./HomePage.html">Techify</a></button></li>
+                <li><a href="./HomePage.html">Home</a></li>
+                <li><a href="./Login.html">Login</a></li>
+              </ul>
+        </nav>
+    </header>
+
+    <div id="Main_box">
+        <h3 id="h3_1">Create Account</h3>
+        <form id="Create_Form">
+            <hr>
+            <label class="labels">First Name</label> <input type="text" class="labels_text"> <br>
+            <label class="labels">Last Name</label> <input type="text" class="labels_text"> <br>
+            <label class="labels">Email</label> <input type="email" class="labels_text"><br>
+            <label class="labels">Password</label> <input type="password" class="labels_text"><br>
+            <label class="labels">Confirm Password</label> <input type="password" class="labels_text"><br>
+
+            <hr/>
+            <label class="labels">Address: </label> <br>
+            <input type="text" class="labels_text" placeholder="Street Number">
+            <input type="text" class="labels_text" placeholder="Apt/Unit">
+            <input type="text" class="labels_text" placeholder="Postal Code">
+            <input type="text" class="labels_text" placeholder="City">
+            <input type="text" class="labels_text" placeholder="Country">
+            
+            <select name="Province" class="labels_text">      
+                <option value="Province">Province</option>
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+            </select>
+            <br>
+            <hr>
+            <button id="button" type="submit">
+                <a id="link_color" href="./Login.html">Create</a>
+            </button>
+        </form>
+    </div>  
+
+    <footer id="footer_content">
+            <a href="#contact" class="links">Contact Us</a>
+            <a href="#about" class="links">About Us</a>
+            <hr/>
+            <div>© 2023 Copyright</div>
+    </footer>
+    
+</body>
+</html>
