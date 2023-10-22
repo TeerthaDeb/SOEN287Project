@@ -167,6 +167,26 @@ ul {
       text-align: center;
     }
   
+    /*--------------------------ForgetPassword---------------------------*/
+    #Main_box_Password{
+      background-color: whitesmoke;
+      padding: 20px;
+      width: 600PX;
+      border-radius: 15px;
+      box-shadow: 0 0 10px inset black;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 70px;
+      display: grid;
+      justify-content: center;
+    }
+
+    @media (min-width: 319px) and (max-width: 700px){
+      #Main_box_Password{
+        width: 300px;
+      }
+    }
+
     /*--------------------------HomePage---------------------------*/
     Home_body_div{
       /* background-image: ; */
