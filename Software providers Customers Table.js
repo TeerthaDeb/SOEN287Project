@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (expiryDate < today) {
             cell.parentNode.querySelector('td:nth-child(6)').innerHTML = '🛑 Expired';
         } else if (expiryDate <= oneMonthFromNow) {
-            cell.parentNode.querySelector('td:nth-child(6)').innerHTML = '🟡 Expiring Soon';
+            cell.parentNode.querySelector('td:nth-child(6)').innerHTML = '🔔 Expiring Soon';
         } else {
-            cell.parentNode.querySelector('td:nth-child(6)').innerHTML = "🟢 good";
+            cell.parentNode.querySelector('td:nth-child(6)').innerHTML = "✔️ good";
         }
     });
   
