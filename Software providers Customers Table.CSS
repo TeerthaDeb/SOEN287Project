@@ -1,0 +1,83 @@
+
+  
+  .dashboard {
+	max-width: 95%;
+	margin: 2px;
+  }
+  
+  #users table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+  }
+  
+  th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+  }
+  
+  th {
+	background-color: #f2f2f2;
+  }
+  
+  button {
+	padding: 5px 10px;
+	margin: 2px;
+	cursor: pointer;
+  }
+  
+  .remind-btn {
+	background-color: #3498db;
+	color: #fff;
+  }
+  
+  .send-promo-btn {
+	background-color: #e74c3c;
+	color: #fff;
+  }
+  
+  td:nth-child(6):before {
+	
+	color: green;
+	font-size: 17px;
+  }
+  
+
+  /* body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Times New Roman', Times, serif;
+	background: rgb(19,133,201);
+	background: radial-gradient(circle, rgba(19,133,201,1) 11%, rgba(88,208,136,1) 59%, rgba(0,255,119,1) 85%);
+} */
+.main{
+	width: 550px;
+	height: 700px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 60px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+.enable-disable{
+	background-color: white;
+	margin: 1%;
+}
+
+
+.toggle-button {
+	padding: 5px 10px;
+	margin: 2px;
+	cursor: pointer;
+  }
+  
+  .toggle-button.button-active {
+	background-color: rgb(253, 52, 52); /* Change to desired color */
+  }
+  
