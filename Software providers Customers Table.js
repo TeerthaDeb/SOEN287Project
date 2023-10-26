@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentStatus = accountStatusCell.innerText.trim();
             const expiryStatus = expiryStatusCell.innerText.trim();
             
-            if (expiryStatus !== '🛑 Expired' && currentStatus !== 'Active') {
-                accountStatusCell.innerText = 'Active';
+            if (expiryStatus !== '🛑 Expired' && currentStatus !== 'Active✅') {
+                accountStatusCell.innerText = 'Active✅';
                 this.classList.toggle('button-active');
                 this.innerText = 'Disable';
 				this.style.backgroundColor = 'red';
             } 
 			else if (expiryStatus !== '🛑 Expired') {
-                accountStatusCell.innerText = 'Inactive';
+                accountStatusCell.innerText = 'Inactive🔒';
                 this.classList.toggle('button-active');
                 this.innerText = 'Enable';
 				this.style.backgroundColor = "blue";

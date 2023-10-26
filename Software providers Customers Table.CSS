@@ -1,5 +1,16 @@
 
   
+  h2{
+    text-align: center;
+    color: #000;
+    background-color: white;
+    width: 250px;
+    margin: 10px;
+    margin-left: 45%;          
+  }
+  table{
+    margin: 3%;
+  }
   .dashboard {
 	max-width: 95%;
 	margin: 2px;
@@ -11,14 +22,15 @@
 	margin-top: 20px;
   }
   
-  th, td {
+  th, td ,th {
 	border: 1px solid #ddd;
 	padding: 8px;
 	text-align: center;
+  background-color: white;
   }
   
   th {
-	background-color: #f2f2f2;
+	background-color: #ebdcb5;
   }
   
   button {
@@ -44,17 +56,8 @@
   }
   
 
-  /* body{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	font-family: 'Times New Roman', Times, serif;
-	background: rgb(19,133,201);
-	background: radial-gradient(circle, rgba(19,133,201,1) 11%, rgba(88,208,136,1) 59%, rgba(0,255,119,1) 85%);
-} */
+
+
 .main{
 	width: 550px;
 	height: 700px;
@@ -70,6 +73,9 @@
 	margin: 1%;
 }
 
+body{
+  background-image: url(background.PNG);
+}
 
 .toggle-button {
 	padding: 5px 10px;
@@ -80,6 +86,39 @@
   .toggle-button.button-active {
 	background-color: rgb(253, 52, 52); /* Change to desired color */
   }
+  
+
+  /*------------- Button --------------------------------------*/
+
+  #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 30px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  #button:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  }
+  
+  #button:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  
   
 
 
@@ -106,3 +145,38 @@
     min-height: 100vh;
     margin-bottom: -100px;
   }
+
+
+
+/*      ***************         Header          *********************/
+ul {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 0 0 10px inset black;
+  justify-content: center;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  color: white;
+  background-color: whitesmoke;
+}
+
+li a:hover{
+  color: blue;
+  text-decoration: underline;
+}

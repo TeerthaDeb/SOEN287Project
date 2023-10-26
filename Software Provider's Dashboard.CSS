@@ -1,0 +1,120 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px inset black;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    color: white;
+    background-color: whitesmoke;
+  }
+  #Home_button{
+    color: #090909;
+    font-size: 18px;
+    border-radius: 5px;
+    background: whitesmoke;
+    border: 1px solid whitesmoke;
+    transition: all .3s;
+    box-shadow: 0 0 10px inset black;
+  }
+body{
+      background-image: url(background.PNG);
+  }
+
+
+
+
+#button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      cursor: pointer;
+      width: 150px;
+      height: 50px;
+      background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+      border-radius: 30px;
+      border: 1px solid #8F9092;
+      transition: all 0.2s ease;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #606060;
+      text-shadow: 0 1px #fff;
+      margin: 5px;
+      display: inline-block;
+    }
+    
+    #button:hover {
+      box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+    }
+    
+    #button:active {
+      box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+    }
+    
+    #button:focus {
+      box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+    }
+
+
+
+
+
+  footer{
+    margin-top: 60%;
+    background-color: whitesmoke;
+    padding: 14px 16px;
+    font-size: 18px;
+    box-shadow: 0 0 10px inset black;
+    text-align: center;
+    height: 120px;
+  }
+  
+  .links{
+    padding: 10px;
+    color: #090909;
+  }
+  
+  main{
+    margin-top: 35%;
+    height: 100px;
+    margin-bottom: -100px;
+  }
+
+
+.SignOut{
+    margin-left: 80% !important;
+}
+
+.ProviderName{
+    background-color: white;
+    align-items: center;
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+}
+
+.customer-info{
+  background-color: white;
+  text-align: center;
+  padding : 20px;
+  border-radius: 30px;
+}
