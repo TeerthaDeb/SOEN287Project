@@ -23,6 +23,11 @@ ul {
     color: white;
     background-color: whitesmoke;
   }
+
+  li a:hover{
+    color: blue;
+    text-decoration: underline;
+  }
   #Home_button{
     color: #090909;
     font-size: 18px;
@@ -77,7 +82,7 @@ body{
 
 
   footer{
-    margin-top: 60%;
+    margin-top: 50%;
     background-color: whitesmoke;
     padding: 14px 16px;
     font-size: 18px;
@@ -92,8 +97,8 @@ body{
   }
   
   main{
-    margin-top: 35%;
-    height: 100px;
+    margin-top: 25%;
+    height: 10px;
     margin-bottom: -100px;
   }
 
@@ -105,7 +110,7 @@ body{
 .ProviderName{
     background-color: white;
     align-items: center;
-    width: 100%;
+    width: 98%;
     border-radius: 30px;
     padding: 10px;
     position: absolute;
