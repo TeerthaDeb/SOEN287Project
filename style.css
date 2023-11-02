@@ -1,14 +1,13 @@
 /* Import Font Dancing Script */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-.homepage {
-    
-   /* background: -webkit-linear-gradient(to bottom, #000000, #fff4ff);  /* Chrome 10-25, Safari 5.1-6 */
-   /* background: linear-gradient( #f6cbcb, #fa8a5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-image:url("bodybg.jpg");
-    color: #dd0055;
- 
+
+/*--------------------------PreConfigEtc-------------------------*/
+:root {
+    --accent-color: #a876aa;
+    --main-transition: all 0.3s ease-in-out;
 }
+<<<<<<< HEAD
 .bodyLi {
     background: rgb(255, 211, 240);
     
@@ -16,131 +15,245 @@
 .bodyprofil
 {
     background-color: rgb(255, 213, 236);
+=======
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+>>>>>>> 8943da239856c706f39432841d6d66cede13da97
 }
 
-/* NavbarTop */
-.navbar-top {
-    background-color: #000000;
-    color: #0c0c0c;
-    box-shadow: 0px 4px 8px 0px rgb(231, 28, 109);
-    height: 70px;
-}
-p {
-    text-indent: 50px;
-  }
-    
-.title {
-    color: #ffffff;
+/*--------------------------Body-------------------------*/
+html,body { height:100%; }
+
+body{
+    background-image: url(background.PNG);
     font-family: 'Roboto', sans-serif;
-    padding-top: 10px;
-    position: absolute;
-    text-align: left;
 }
 
-.navbar-top ul {
-    float: right;
+/*--------------------------Nav-------------------------*/
+.nav {
+    box-shadow: 0 0 10px inset black;
+    /*background-color: transparent;*/
+    background-color: whitesmoke;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+  
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+  
+.nav a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    padding: 7px 15px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav * {
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+}
+  
+.nav a.current,
+.nav a:hover {
+    color: #a876aa;
+}
+  
+.nav a.current {
+    font-weight: 600;
+}
+  
+.nav a.current::before {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #a876aa;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav.active {
+    background-color: #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+  
+.nav.active a {
+    color: #000;
+}
+  
+.nav.active a.current::before {
+    opacity: 0;
+}
+  
+.nav.active .container {
+    padding: 20px 0;
+}
+/*--------------------------Home Page-------------------------*/
+
+.home{
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px inset black;
+    margin-left: 50px;
+    margin-right: 50px;
+    bottom: 0;    
+}
+  
+/*--------------------------Other contents related to many pages-------------------------*/
+
+
+
+.all{
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px inset black;
+    margin-left: 50px;
+    margin-right: 50px;
+    bottom: 0;
+    height: auto;
+}
+
+
+
+.content{
+    padding-left: 5%;
+}
+
+.menu{
     list-style-type: none;
     margin: 0;
+    padding: 0;
     overflow: hidden;
-    padding: 18px 50px 0 40px;
+    color: white;
 }
 
-.navbar-top ul li {
-    float: left;
-}
-
-.navbar-top ul li a {
-    color: #f6ebeb;
-    padding: 14px 16px;
+  
+.menu a {
+    display: block;
+    color: black;
     text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
-.home{
-     color:#ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size:50px;
-    text-align: center; 
-    
-   
-     
-    
+
+.menu a:hover{
+    color: #a876aa;
 }
 
-.home_pic{
-   
-    
-    background-size: 100%;
-    background-position: center;
-    height: 300px;
+/*--------------------------Profil PAGE-------------------------*/
 
-}
-.Li{
-
-    color:rgb(16, 15, 15);
-   font-family: 'Roboto', sans-serif;
-    margin-top: 10px ;
-    text-align: center;  
-
-
-}
-#m{
-color:rgb(255, 209, 233);
-
-font-family: 'Pixelify Sans', sans-serif;
-
-    font-size:100px;
-   
-    text-shadow: #000000;
-    
-
-
-}
-
-.actions ul li{
-    float: left;
-    padding: 40px ;
-    border-right:1px solid #bbb;
-    overflow: hidden;
+.profil{
     text-align: center;
-    
 }
 
-.actions ul li a {
+
+/*--------------------------Key-Gen PAGE-------------------------*/
+.key-gen{
     text-align: center;
-    font-size:30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #f9b5b5;
-    background-color: #000000;
-    background-size: 100px;
-}
+    margin-top: 5%;
+    font-size: 50px;
+    border-bottom: solid;
+ }
 
-.key-gen input[type=submit]{
-   
+ .key-gen input[type=submit]{
     color:#000000;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 20px;
     margin-top: 5px;
-  
     background-color: #fc0000;
-    
-
-    
-
-}
-.key-gen input[ type=text]{
- 
-}
-#SoftwareTitle{
-    font-size: 50px;
-    font-family: 'Roboto', sans-serif;
-
-    color: #131111;
-}.key-gen{
-    float:left;
 }
 
-.profil{
-   
-   padding-left: 2%
-    
+/*--------------------------Current Page-------------------------*/
+
+.currentPage{
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px inset black;
+    margin-left: 50px;
+    margin-right: 50px;
+    bottom: 0;
+}
+
+table{
+    border-collapse: collapse;
+}
+  
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center{
+    border : 2px solid #a876aa;
+}
+
+.center td, .center th{
+    border: 1px solid #a876aa;
+}
+
+.center .renewOFF{
+    background-color: #ffffff;
+    color: red;
+}
+
+.center .renewON{
+    background-color: #ffffff;
+    color: green;
+}
+
+/*--------------------------Footer---------------------------*/
+footer{
+    background-color: whitesmoke;
+    padding: 14px 16px;
+    font-size: 18px;
+    box-shadow: 0 0 10px inset black;
+    text-align: center;
+    height: 120px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a.current,
+footer a:hover {
+    color: #a876aa;
+}
+
+.links{
+    padding: 10px;
+    color: #090909;
+}
+
+.push{
+    height: 120px;
+}
+
+main{
+    min-height: 100vh;
+    margin-bottom: -100px;
 }

@@ -1,57 +1,97 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styleLicense.css">
-    <link rel="stylesheet"href="style.css">
-        <!-- Bootstrap CSS -->
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-        <!-- FontAwesome 5 -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <body>
-        <div class="navbar-top">
-            <div class="title">
-                <h1 id="licensenav">MY LICENSE</h1>
-            </div>
-            <!-- Navbar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current</title>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body class="bodyLi">
+    <nav class="nav">
+        <div class="container">
+            <h1 class="logo">
+                <a href="home.html"><img style="height: 100px; width: 100px;" src="Logo1.PNG" alt="LOGO"></a>
+            </h1>
             <ul>
-                <li>
-                    <a href="index.html">
-                        <!--<span class="icon-count">Home</span>-->
-                        <i class="fas fa-home fa-2x" ></i>
-                       
-                    </a>
-                </li></i>
-                   
-                </li>
-                <li>
-                    <a href="profil.html">
-                        <!--<span class="icon-count">Profil</span>-->
-                        <i class="fas fa-user fa-2x"></i>
-                    </a>
-                <li>
-                    <a href="#sign-out">
-                        
-                        
-                        <i class="fa fa-sign-out-alt fa-2x"></i>
-                    </a>
-                </li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="#">Sign out</a></li>
             </ul>
         </div>
-        <div class="key-association">
-            <table class="key">
-                <tr>
-                    <th> Serial Number </th>
-                    <th> Software Name </th>
-                    <th> Purchase Date </th>
-                    <th> Expiry Date </th>
-                </tr>
-                <tr>
-                    <td> AKJ4 YG8L CE89 </td>
-                    <td> Office 360 </td>
-                    <td> 2023-10-12 </td>
-                    <td> 2024-10-31 </td>
-                </tr>
-            </table>
+    </nav>
+    <br>
+
+    <div class="container-fluid">
+        
+            <div class="row">
+                <div class="col-9">
+                    <div class="currentPage">
+                        <div class="">
+                            <br><br>
+                            <table class="center">
+                                <tr>
+                                    <th> Serial Number </th>
+                                    <th> Software Name </th>
+                                    <th> Purchase Date </th>
+                                    <th> Expiry Date </th>
+                                    <th> Expiry Date </th>
+                                </tr>
+                                <tr>
+                                    <td> AKJ4 YG8L CE89 </td>
+                                    <td> Office 360 </td>
+                                    <td> 2023-10-12 </td>
+                                    <td> 2024-10-31 </td>
+                                    <td class="renewOFF"> Renew not available ! </td>
+                                </tr>
+                                <tr>
+                                    <td> AKJ4 YG8L CE89 </td>
+                                    <td> Office 360 </td>
+                                    <td> 2023-10-12 </td>
+                                    <td> 2024-10-31 </td>
+                                    <td class="renewON"> 
+                                        Renew available ! 
+                                        <button onclick="MyFunction()">Renew</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br><br>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-3">
+                    <div class="currentPage">
+                        <ul class="menu">
+                            <li class="Generating"> <a href="Generate_New_License.html"> Generate a new License</a></li>
+                            <li class="RenewLicense"> <a href="current.html"> Renew an exisiting License</a></li>
+                            <li classe="LicenseD"> <a href="current.html"> Current License</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+    
+
+    <footer id="footer_content">
+        <a href="#contact" class="links">Contact Us</a>
+        <a href="#about" class="links">About Us</a>
+        <hr />
+        <div>© 2023 Copyright</div>
+    </footer>
+
+    <script>
+        function MyFunction(){
+            alert(" RENEWED ! ");
+        }
+
+    </script>
+</body>
 </html>
