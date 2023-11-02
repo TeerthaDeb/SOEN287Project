@@ -2,7 +2,7 @@
 <html >
 <head>
 <meta charset="UTF-8">
-<title>Account</title>
+<title>Login</title>
 <link rel="stylesheet" href="./style1.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,46 +16,61 @@
             <ul>
                 <li><button id="Home_button"><a href="./HomePage.html">Techify</a></button></li>
                 <li><a href="./HomePage.html">Home</a></li>
-                <li><a href="#post_page">Posts</a></li>
-                <li><a href="#">Another_Page</a></li>
+                <li><a href="./index.html">License Generator</a></li>
+                <li><a href="./current.html">Current License</a></li>
+                <li><a href="">Renew License</a></li>
               </ul>
         </nav>
     </header>
+<main>
+    <div id="Main_box_Manage">
+        <h3 id="h3_1">Profile</h3>
+        <form id="form">
+          <table id="table_Manage">
+            <tr>
+              <th colspan="2" id="table_Managedata">Personal information</th>
+            </tr>
+            <tr>
+              <td id="table_Managedata">First Name</td>
+              <td id="table_Managedata">Last Name</td>
+            </tr>
+            <tr>
+              <td id="table_Managedata">Email</td>
+              <td id="table_Managedata">User type</td>
+            </tr>
+            <tr>
+              <td><button id="button">Edit profile</button></td>
+            </tr>
+          </table>
+          <hr>
+          <table id="table_Manage">
+            <tr>
+              <th colspan="2" id="table_Managedata">Password Reset</th>
+            </tr>
+            <tr>
+              <td id="table_Managedata">Current Password</td>
+              <td id="table_Managedata">123456789</td>
+            </tr>
+            <tr>
+              <td id="table_Managedata">New Password</td>
+              <td id="table_Managedata"><input type="password" class="labels_text"></td>
+            </tr>
+            <tr>
+              <td id="table_Managedata">Confirm Password</td>
+              <td id="table_Managedata"><input type="password" class="labels_text"></td>
+            </tr>
+            <tr>
+              <td><button id="button">Change Password</button></td>
+            </tr>
+          </table>
+        </form>
 
-    <div id="Profile_box" class="text-center">
-       <div id="profile_div1" class="mx-auto">
-            <img id="profile_pic" src="./profile.PNG">
-            <h3 id="h3">Profile</h3>
-       </div>
+    <div class="push"></div>
 
-       <div id="account1" class="mx-auto mt-4">
-        <label class="labels">First Name</label> <input type="text" class="labels_text"> <br>
-        <hr/>
-        <label class="labels">Last Name</label> <input type="text" class="labels_text"> <br>
-        <hr/>
-        <label class="labels">Email</label> <input type="email" class="labels_text"><br>
-        <hr/>
-        <label class="labels">User type</label> <input type="" class="labels_text"><br>
-        <hr/>
-        <button id="button">Edit profile</button>
-      </div>
 
-       <div id="account" class="mx-auto mt-4"> 
-        <label class="labels">Current Password</label> <input type="password" class="labels_text"><br>
-        <hr/>
-        <label class="labels">New Password</label> <input type="password" class="labels_text"><br>
-        <hr/>
-        <label class="labels">Confirm Password</label> <input type="password" class="labels_text"><br>
-        <hr/>
-        <button id="button">Change Password</button>    
-    </div>
-       
-       <button id="button" class="mx-auto mt-4">Delete Account</button>
-
-    </div>
-
+</main>
     <footer id="footer_content">
-      <a href="#contact" class="links">Contact Us</a>
+      <a href="./ContactUs.html" class="links">Contact Us</a>
       <a href="#about" class="links">About Us</a>
       <hr/>
       <div>© 2023 Copyright</div>

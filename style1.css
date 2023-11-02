@@ -258,52 +258,46 @@ ul {
       }
     }
   
-  /*--------------------------Account Page---------------------------*/
-  #Profile_box{
-   
+  /*--------------------------Manageaccount Page---------------------------*/
+  #Main_box_Manage{
     background-color: whitesmoke;
-    padding: 10px;
+      padding: 20px;
+      width: 600PX;
+      height: 650px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px inset black;
+      margin: auto;
+      display: grid;
+      justify-content: center;
+      margin-top: 40px;
   }
-  
-  #profile_div1{
-    height: 150px;
-    width: 190px;
-    text-align: center;
-    display: inline-block;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    box-shadow: 0 0 10px inset black;
-    padding: 10px 10px 10px 10px;
-  }
-  
-  #profile_pic{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  #h3{
-    color: black;
-  }
-  
-  #account{
-    width: 500px;
-    display: inline-block;
-    background-color: whitesmoke;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px inset black;
-  }
-  
-  #account1{
-    width: 400px;
-    display: inline-block;
-    background-color: whitesmoke;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px inset black;
-  }
-  
+    #table_Manage{
+      font-weight: bold;
+      width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 5px inset black;
+    }
+
+    #table_Managedata{
+      padding: 10px;
+    }
+
+    @media (min-width: 400px) and (max-width: 618px){
+      #Main_box_Manage{
+        width: 400px;
+        margin-bottom: 10px;
+
+       }
+    
+       #table_Manage{
+        width: 350px;
+       }
+    
+       #table_Managedata{
+
+    }
+    
+    }
   
   /*--------------------------Footer---------------------------*/
   footer{
@@ -328,3 +322,82 @@ ul {
     min-height: 100vh;
     margin-bottom: -100px;
   }
+
+
+   /*--------------------------ContactUs page---------------------------*/
+   #Main_box_Contact{
+    background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px inset black;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 70px;
+      display: grid;
+      justify-content: center;
+      width: 800px;
+      text-align: center;
+      font-family: 'PT Serif', serif;
+   }
+
+#table_contact{
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align: center;
+  margin-left: 120px;
+  font-family: italic;
+  font-weight: bold;
+}
+
+#table_head{
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+@media (min-width: 400px) and (max-width: 618px){
+  #Main_box_Contact{
+    width: 400px;
+    text-align: center;
+   }
+
+   #form_contactus{
+    text-align: center;
+    font-size: 2vw;
+   }
+
+#table_contact{
+  margin-left: 40px;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 900px){
+  #Main_box_Contact{
+    background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px inset black;
+      margin: auto;
+      margin-top: 70px;
+      margin-bottom: 70px;
+      display: grid;
+      justify-content: center;
+      width: 600px;
+      text-align: center;
+   }
+
+#table_contact{
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align: center;
+  margin-left: 35px;
+}
+
+#table_head{
+  border: 2px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+}
