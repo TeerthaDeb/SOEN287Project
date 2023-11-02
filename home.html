@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Home Page</title>
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="style.css">
@@ -12,39 +12,35 @@
     <!-- FontAwesome 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
-<body class="bodyprofil">
+<body class="homepage">
     <nav class="nav">
         <div class="container">
           <h1 class="logo">
             <a href="home.html"><img style="height: 100px; width: 100px;" src="Logo1.PNG" alt="LOGO"></a>
-          </h1>
+          </h1><!--<i class="fas fa-home fa-2x"></i> My Website</a></h1>-->
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="profil.html" class="current">Profil</a></li>
+            <li><a href="home.html" class="current">Home</a></li>
+            <li><a href="profil.html">Profil</a></li>
             <li><a href="#">Sign out</a></li>
             <li><a href="#">Test</a></li>
           </ul>
         </div>
     </nav>
     <br>
-    <div class="all">
-        <br>
-        <!-- Profil -->
-        <div class="profil">
-            <div class="P.I">
-                <h2> Personal Information </h2>
-                <p> Name</p> 
-                <p> Last name</p>
-                <p> Date of Birth</p>
-                <p> Address</p>
-                <p> </p>
-            </div>
-            <br>
-            <div class=" Contact">
-                <h2> Contact </h2>
-                <p >Email</p>
-                <p> Phone Number</p>
-            </div>
+    <div class="home">
+      <br>
+        <!-- Home -->
+        <div class="content">
+           <p> Welcome [Name] ! </p>
+           <H4>  Here you can see and manage your license keys. </H4>
+        </div>
+        <br><br><br>
+        <div  class="actions">
+            <ul class="menu">
+                <li class="Generating"> <a href="Generate_New_License.html"> Generate a new License</a></li>
+                <li class="RenewLicense"> <a href="current.html"> Renew an exisiting License</a></li>
+                <li classe="LicenseD"> <a href="current.html"> Current License</a></li>
+            </ul>
         </div>
     </div>
 
