@@ -158,7 +158,7 @@ footer {
   font-size: 18px;
   box-shadow: 0 0 10px inset black;
   text-align: center;
-  height: 0px;
+  height: 50px;
 }
 header {
 	display: flex;
