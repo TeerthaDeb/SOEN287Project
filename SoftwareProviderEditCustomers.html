@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Customer</title>
+    <link rel="stylesheet" href="SoftwareProviderEditCustomers.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href = "Software Provider's Dashboard.html">Dashboard</a></li>
+            <li><a href="Create New Customer.html">Create New Customers</a></li>
+            <li><a href="Software providers Customers Table.html">Clients Table</a></li>
+            <li><a href="SoftwareProviders Settings.html">Settings</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="customer-list">
+            <h2>Customer List</h2>
+            <ul>
+                <li>
+                    <span data-id="1">ID : 12359821</span>
+                    <button class="edit-btn">Edit</button>
+                </li>
+                <li>
+                    <span data-id="2">ID : 12316521</span>
+                    <button class="edit-btn">Edit</button>
+                </li>
+                <li>
+                    <span data-id="3">ID : 6513212</span>
+                    <button class="edit-btn">Edit</button>
+                </li>
+                <li>
+                    <span data-id="4">ID: 65132121</span>
+                    <button class="edit-btn">Edit</button>
+                </li>
+                <li>
+                    <span data-id="5">ID : 51513222</span>
+                    <button class="edit-btn">Edit</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="customer-details">
+            <h2>Customer Details</h2>
+            <form id="customer-form">
+                <input type="hidden" id="customer-id">
+
+                <label for="id-id"> ID: </label>
+                <input type ="text" id = "id-id" disabled><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter the phone number in this format (xxx) xxx-xxxx"><br><br>
+        
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="AboutUs.html">About Us</a>
+        <div>© 2023 Copyright</div>
+    </footer>
+
+    <script src="SOftwareProviderEditCustomers.js"></script>
+</body>
+</html>
