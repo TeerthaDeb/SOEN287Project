@@ -2,9 +2,8 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: whitesmoke;
-  box-shadow: 0 0 10px inset black;
+  box-shadow: 0 0 10px inset rgb(0, 0, 0);
 }
 
 li {
@@ -104,9 +103,8 @@ footer {
 }
 
 main {
-  margin-top: 25%;
+  margin-top: 200px;
   height: 10px;
-  margin-bottom: -100px;
 }
 
 
@@ -115,13 +113,15 @@ main {
 }
 
 .ProviderName {
+  margin-top: 80px;
   background-color: white;
-  align-items: center;
-  width: 98%;
+  width: 97%;
   border-radius: 30px;
   padding: 10px;
   position: absolute;
-  top: 70px;
+  top: 40px;
+  text-align: center;
+  justify-self: center;
 }
 
 .customer-info {
@@ -129,4 +129,15 @@ main {
   text-align: center;
   padding: 20px;
   border-radius: 30px;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	background-color: whitesmoke;
+	padding: 10px 20px;
+	box-shadow: 0 0 10px inset black;
+	position: fixed;
+	width: 100%;
+	top: 0;
 }

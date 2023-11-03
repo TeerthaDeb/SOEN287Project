@@ -9,96 +9,12 @@ header {
 	top: 0;
 }
 
-.SoftwareProvidersLogInAndSignUp {
-	display: block;
-	width: 550px;
-	height: 600px;
-	background: red;
-	overflow: hidden;
-	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
-	border-radius: 60px;
-	box-shadow: 5px 20px 50px #000;
-	margin-top: 80px;
-	
-}
-
-#chk {
-	display: none;
-}
-
-.signup {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-color: whitesmoke;
-	padding: 14px 16px;
-	font-size: 18px;
-	box-shadow: 0 0 10px inset black;
-}
-
-label {
-	font-size: 3.0em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-
-input {
-	width: 80%;
-	height: 20px;
-	background: #ffffff;
-	justify-content: center;
-	display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: rgb(18, 31, 26);
-	outline: none;
-	border-radius: 50px;
-	font-size: large;
-}
-
-.login {
-	height: 110%;
-	background: #162920;
-	border-radius: 60% / 10%;
-	transform: translateY(-190px);
-	transition: .8s ease-in-out;
-	margin-top: 20px;
-
-}	
-
-.login label {
-	margin-top: 20%;
-	color: white;
-	transform: scale(.6);
-}
-
-#chk:checked~.login {
-	transform: translateY(-650px);
-}
-
-#chk:checked~.login label {
-	transform: scale(1);
-}
-
-#chk:checked~.signup label {
-	transform: scale(.6);
-}
-
-
-
 body {
 	background-image: url(background.PNG);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-
-
 
 button {
 	display: flex;
@@ -121,15 +37,6 @@ button {
 	display: inline-block;
 }
 
-.SignUpButtonForSOftwareProver , .LoginButtonForSOftwareProver {
-	justify-content: center;
-	margin: 9px auto;
-	display: block;
-	width: 50%;
-	height: 40px;
-	margin-top: 50px;
-}
-
 button:hover {
 	box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
 }
@@ -141,9 +48,6 @@ button:active {
 button:focus {
 	box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
-
-
-
 
 
 footer {
@@ -159,19 +63,12 @@ footer {
 	text-align: center;
 	height: 120px;
 	margin-top: 20px;
-	/* Add margin-top to create space between signup and footer */
 }
 
 
 .links {
 	padding: 10px;
 	color: #090909;
-}
-
-main {
-	margin-top: 25%;
-	height: 10px;
-	margin-bottom: -100px;
 }
 
 
@@ -205,4 +102,73 @@ li a.active {
 li a:hover {
 	color: blue;
 	text-decoration: underline;
+}
+
+
+
+.container {
+    display: inline;
+    padding: 20px;
+    box-shadow: 0 0 10px inset black;
+    position: fixed;
+    top: 80px;
+    bottom: 120px;
+    overflow: auto;
+    width: 100%;
+    align-items: center;
+}
+
+.container p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container li {
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 10px;
+	background-color: whitesmoke;
+	margin-left: 5%;
+	height: 500px;
+}
+
+.tab-pane {
+    padding: 20px;
+}
+
+form label,
+form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+}
+
+footer {
+    background-color: whitesmoke;
+    padding: 14px 16px;
+    box-shadow: 0 0 10px inset black;
+    text-align: center;
+    height: 120px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: none;
 }

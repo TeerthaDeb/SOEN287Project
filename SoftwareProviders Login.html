@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Slide Navbar</title>
+	<title>Log In Page For Software Provider</title>
 	<link rel="stylesheet" type="text/css" href="SoftwareProviders Login.CSS">
 	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -10,8 +10,8 @@
 	<header>
         <nav>
             <ul>
-                <li><a href="./HomePage.html">Techify</a></button></li>
-                <li><a href="./HomePage.html">Home</a></li>
+                <li><a href="HomePage.html">Techify</a></button></li>
+                <li><a href="HomePage.html">Home</a></li>
               </ul>
         </nav>
     </header>
@@ -25,7 +25,7 @@
 					<input type = "email" name = "email" placeholder = "Email" , required>
 					<input type = "password" name ="pswd" placeholder = "Password" , required>
 					<input type = "text" name = "Organization" placeholder = "Your Organization" , required>
-					<button class = "SignUpButtonForSOftwareProver">Sign up</button>
+					<button class = "SignUpButtonForSOftwareProver">Sign Up</button>
 				</form>
 			</div> <!--SignUp Ends here-->
 
@@ -34,18 +34,29 @@
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" , required>
 					<input type="password" name="pswd" placeholder="Password" , required>
-					<button class = "SignUpButtonForSOftwareProver" >Login</button>
+					<button class = "LoginButtonForSOftwareProver">Log In </button>
 				</form>
 			</div> <!--Log in Ends here-->
 	</div> <!--SoftwareProvidersLogInAndSignUp ends-->
 
 	<!--Footer Starts-->
 	<footer id="footer_content">
-      <a href="#contact" class="links">Contact Us</a>
-      <a href="#about" class="links">About Us</a>
+      <a href= "ContactUs.html" class="links">Contact Us</a>
+      <a href= "AboutUs.html" class="links">About Us</a>
       <hr/>
       <div>© 2023 Copyright</div>
     </footer>
+
+	<script>
+		document.querySelector('.LoginButtonForSOftwareProver').addEventListener('click', function() {
+			window.location.href = "Software Provider's Dashboard.html";
+		});
+
+		document.querySelector('.SignUpButtonForSOftwareProver').addEventListener('click', function() {
+			window.location.href = "Software Provider's Dashboard.html";
+		});
+	</script>
+	
 	<!--Footer Ends-->
 </body>
 </html>

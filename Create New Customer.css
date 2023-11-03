@@ -1,5 +1,55 @@
+header {
+	display: flex;
+	justify-content: center;
+	background-color: whitesmoke;
+	padding: 10px 20px;
+	box-shadow: 0 0 10px inset black;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+ul {
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px inset black;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    color: white;
+    background-color: whitesmoke;
+  }
+  
+  li a:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+li a.active {
+	color: white;
+	background-color: whitesmoke;
+}
+
+li a:hover {
+	color: blue;
+	text-decoration: underline;
+}
 body {
-    margin-top: 10%;
+    margin-top: 10px;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -9,6 +59,7 @@ body {
 }
 
 form {
+    margin-top: 20%;
     max-width: 500px;
     background-color: #fff;
     padding: 20px;
@@ -62,13 +113,6 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
-
-
-
-
-/**********				CSS			************/
-
-/*--------------------------Navbar-------------------------*/
 
 
 body {

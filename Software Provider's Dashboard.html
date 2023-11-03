@@ -15,37 +15,43 @@
                 <li><a href="Software providers Customers Table.html">Clients Table</a></li>
                 <li><a href="Create New Customer.html">New Customers</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#view-products">View Products</a></li>
                 <li><a href="#edit-customers">Edit Customers Info</a></li>
+                <li><button id="button" class = "SignOut">Sign Out</button></li>
             </ul>
         </nav>
     </header>
 
     <h1>Dashboard</h1>
     <div class = ProviderName>
-        <p>Hello [Software Provider]</p>
-        <button id="button" class = "SignOut">Sign Out</button>
+        <p><h3>Hello [Software Provider]</h3></p>
+        <p>Your Stats Below:</p>
     </div>
     
     <main>
         <div class ="customer-info">
             <p> <h2>Dashboard Info </h2> </p>
-            <p>Existing Customers: <span id="existing-customers">0</span></p>
-            <p>Expiring in a Month: <span id="expiring-customers">0</span></p>
-            <p>Expired Customers: <span id="expired-customers">0</span></p>
+            <p>Existing Customers: <span id="existing-customers">9</span></p>
+            <p>Expiring in a Month: <span id="expiring-customers">1</span></p>
+            <p>Expired Customers: <span id="expired-customers">4</span></p>
         </div>
     </main>
 
     
     
+    <!--Footer Starts-->
     <footer id="footer_content">
-		<a href="#contact" class="links">Contact Us</a>
-		<a href="#about" class="links">About Us</a>
-		<hr />
-		<div>© 2023 Copyright</div>
+        <a href="ContactUs.html" class="links">Contact Us</a>
+        <a href="AboutUs.html" class="links">About Us</a>
+        <hr />
+        <div>© 2023 Copyright</div>
     </footer>
+    <!--Footer Ends-->
 
-    <script src = "Software Provider's Dashboard.js"></script>
+    <script>
+        document.querySelector('.SignOut').addEventListener('click', function() {
+			window.location.href = "SoftwareProviders Login.html";
+		});
+    </script>
 </body>
 
 </html>
