@@ -51,18 +51,13 @@ button:focus {
 
 
 footer {
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 95%;
-	background-color: whitesmoke;
-	padding: 14px 16px;
-	font-size: 18px;
-	box-shadow: 0 0 10px inset black;
-	text-align: center;
-	height: 120px;
-	margin-top: 20px;
+    background-color: whitesmoke;
+    padding: 14px 16px;
+    font-size: 18px;
+    box-shadow: 0 0 10px inset black;
+    text-align: center;
+    width: 90%;
+    border-radius: 20px;
 }
 
 
