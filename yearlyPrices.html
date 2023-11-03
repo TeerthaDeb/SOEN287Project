@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+ <link rel="stylesheet" href="mystyle1.css">
+    </head>
+    <header></header>
+    <br>
+    <br>
+    <br>
+    <body>
+        <center>
+           <p style="color:white"> Monthly
+               <label class="toggle-switch">
+                   <input type="checkbox" id="toggleButton" checked="checked">
+                   <span class="slider"></span>
+               </label>
+               Yearly
+           </center>
+        </p>
+   
+<div id="infoPrice">
+    <div class="price standard">
+      <div class="header">
+        <span class="charges">$300</span>
+        <span class="plan"> Standard Plan</span>
+      </div>
+      <ul class="font">
+        <li>Perfect for personal use</li>
+        <li>$10 off on your next Walmart purchase</li>
+      </ul>
+      <button><a href="paymentPage.html">Add to cart</a></button>
+     
+    </div>
+    <div class="price professional">
+      <div class="header">
+        <span class="charges">$500</span>
+        <span class="plan">Professional Plan</span>
+      </div>
+      <ul class="font">
+        <li>Perfect for professional use</li>
+        <li>Free 1 month insurance for your device</li>
+        <li>20% OFF on your next purchase</li>
+      </ul>
+      <button><a href="paymentPage.html">Add to cart</a></button>
+      
+    </div>
+    <div class="price ultimate">
+      <div class="header">
+        <span class="charges">$700</span>
+        <span class="plan"> Ultimate Plan</span>
+      </div>
+      <ul class="font">
+        <li>Perfect for both personal and professional use</li>
+        <li>Free 3 months insurance for your device</li>
+        <li>20% OFF on your next purchase</li>
+        <li>1 month Spotify premium</li>
+      </ul>
+      <button><a href="paymentPage.html">Add to cart</a></button>
+    </div>
+  </div>
+<footer></footer>
+  <script>
+    const toggleButton = document.getElementById('toggleButton');
+
+    toggleButton.addEventListener('change', function() {
+        if (toggleButton.checked) {
+         window.location.href = 'current-page.html';
+        } else {
+           window.location.href = 'monthlyPrices.html'; 
+        }
+    });
+</script>
+<footer></footer>
+</script>
+</body>
+</html>

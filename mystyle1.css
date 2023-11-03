@@ -1,0 +1,172 @@
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 200px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 200px;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+body{
+  background-image: url(background.PNG);
+}
+
+#infoPrice{
+  width: 989px;
+  margin: 100px auto;
+  font-family: 'Open Sans', Helvetica;
+}
+
+.price{
+  width: 300px;
+  background: rgb(255, 255, 255);
+  display: inline-table;
+  top: 0;
+}
+.price:not(:last-child){
+  margin-right: 40px;
+}
+.header{
+  color: rgb(255, 255, 255);
+}
+.standard .header{
+  background: rgb(245, 166, 35);
+}
+.professional .header{
+  background: rgb(246, 77, 77);
+}
+.ultimate .header{
+  background: rgb(48, 219, 181);
+}
+.charges{
+  width: 100%;
+  font-size: 60px;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  padding: 30px 0 10px;
+}
+.plan{
+  width: 100%;
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding: 0 0 30px;
+}
+.font{
+  list-style: none;
+  text-align: center;
+  color: rgb(138, 138, 138);
+  margin: 0;
+  padding: 0;
+}
+.font li{
+  margin: 0 35px;
+  padding: 20px 15px;
+  width: 200px;
+}
+.font li:not(:last-child){
+  border: 1px solid rgb(242, 242, 242);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+button{
+  color:white;
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 20px auto 35px;
+}
+.standard button{
+  background: rgb(245, 166, 35);
+}
+.professional button{
+  background: rgb(246, 77, 77);
+}
+.ultimate button{
+  background: rgb(48, 219, 181);
+}
+a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ a:active {
+  color: white;
+  background-color: whitesmoke;
+}
+
+ a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  background-color: whitesmoke;
+  padding: 14px 16px;
+  font-size: 18px;
+  box-shadow: 0 0 10px inset black;
+  text-align: center;
+  height: 0px;
+}
+header {
+	display: flex;
+	justify-content: center;
+	background-color: whitesmoke;
+	padding: 10px 20px;
+	box-shadow: 0 0 10px inset black;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
