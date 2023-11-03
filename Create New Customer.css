@@ -1,12 +1,12 @@
 header {
-	display: flex;
-	justify-content: center;
-	background-color: whitesmoke;
-	padding: 10px 20px;
-	box-shadow: 0 0 10px inset black;
-	position: fixed;
-	width: 100%;
-	top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px inset black;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 ul {
@@ -16,38 +16,35 @@ ul {
     padding: 0;
     background-color: whitesmoke;
     box-shadow: 0 0 10px inset black;
-  }
-  
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  li a.active {
+}
+
+li a.active {
     color: white;
     background-color: whitesmoke;
-  }
-  
-  li a:hover {
-    color: blue;
-    text-decoration: underline;
-  }
+}
+
 li a.active {
-	color: white;
-	background-color: whitesmoke;
+    color: white;
+    background-color: whitesmoke;
 }
 
 li a:hover {
-	color: blue;
-	text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
 }
+
 body {
     margin-top: 10px;
     font-family: Arial, sans-serif;
@@ -125,8 +122,6 @@ body {
     gap: 100px;
 }
 
-
-
 button {
     display: flex;
     align-items: center;
@@ -147,15 +142,15 @@ button {
     margin: 20px;
     display: inline;
 }
-    
+
 button:hover {
     box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
 }
-    
+
 button:active {
     box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
-    
+
 button:focus {
     box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
@@ -173,20 +168,13 @@ footer {
     width: 90%;
     border-radius: 20px;
 }
-  
-.links{
-padding: 10px;
-color: #090909;
+
+.links {
+    padding: 10px;
+    color: #090909;
 }
-  
-  
 
-
-
-
-
-
-
-
-
-
+#CreateCustomerSubmit a{
+    color: black !important;
+    text-decoration: none;
+}

@@ -167,3 +167,8 @@ footer {
     left: 0;
     transform: none;
 }
+
+footer a{
+	text-decoration: none;
+	color:#090909;
+}
