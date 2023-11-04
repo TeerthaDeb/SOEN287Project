@@ -15,9 +15,7 @@
               </ul>
         </nav>
     </header>
-        <br>
-        <br>
-        <br>
+       
         <center>
            <p style="color:white"> Monthly
                <label class="toggle-switch">
@@ -30,7 +28,7 @@
    
 <div id="infoPrice">
     <div class="standard price">
-      <div class="header">
+      <div class="design">
         <span class="charges">$35</span>
         <span class="plan"> Standard Plan</span>
       </div>
@@ -42,7 +40,7 @@
      
     </div>
     <div class="price professional">
-      <div class="header">
+      <div class="design">
         <span class="charges">$50</span>
         <span class="plan">Professional Plan</span>
       </div>
@@ -55,7 +53,7 @@
       
     </div>
     <div class="price ultimate">
-      <div class="header">
+      <div class="design">
         <span class="charges">$70</span>
         <span class="plan"> Ultimate Plan</span>
       </div>
@@ -68,22 +66,24 @@
       <button><a href="paymentPage.html">Add to cart</a></button>
     </div>
   </div>
-  <footer id="footer_content">
-    <a href="#contact" class="links">Contact Us</a>
-    <a href="#about" class="links">About Us</a>
-    <hr />
-    <div>© 2023 Copyright</div>
-</footer>
-  <script>
-    const toggleButton = document.getElementById('toggleButton');
 
-    toggleButton.addEventListener('change', function() {
-        if (toggleButton.checked) {
-            window.location.href = 'yearlyPrices.html';
-        } else {
-            window.location.href = 'current-page.html'; 
-        }
-    });
+  
+<footer>
+  <a href="#contact" class="links">Contact Us</a>
+   <a href="#about" class="links">About Us</a>
+   <hr />
+  <div> &copy 2023 Copyright </div>
+ </footer>
+ <script>
+  const toggleButton = document.getElementById('toggleButton');
+
+  toggleButton.addEventListener('change', function() {
+      if (toggleButton.checked) {
+          window.location.href = 'yearlyPrices.html';
+      } else {
+          window.location.href = 'current-page.html'; 
+      }
+  });
 </script>
 </body>
 </html>
