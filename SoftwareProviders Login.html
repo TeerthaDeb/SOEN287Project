@@ -19,22 +19,21 @@
 	<div class="SoftwareProvidersLogInAndSignUp">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 			<div class="signup">
-				<form>
+				<form id="signupForm" action="http://localhost:3000/signup" method="POST"> <!-- Added id for the form -->
 					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type = "text" name = "txt" placeholder= "User name" , required>
-					<input type = "email" name = "email" placeholder = "Email" , required>
-					<input type = "password" name ="pswd" placeholder = "Password" , required>
-					<input type = "text" name = "Organization" placeholder = "Your Organization" , required>
-					<button class = "SignUpButtonForSOftwareProver">Sign Up</button>
+					<input type="text" name="Organization" placeholder="Your Organization" required>
+					<input type="email" name="email" placeholder="Email" required>
+					<input type="password" name="pswd" placeholder="Password" required>
+					<button type="submit" class="SignUpButtonForSoftwareProvider">Sign Up</button>
 				</form>
 			</div> <!--SignUp Ends here-->
 
 			<div class="login">
-				<form>
+				<form action="http://localhost:3000/signin" method="POST">
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" , required>
 					<input type="password" name="pswd" placeholder="Password" , required>
-					<button class = "LoginButtonForSOftwareProver">Log In </button>
+					<button class = "LoginButtonForSoftwareProvider">Log In</button>
 				</form>
 			</div> <!--Log in Ends here-->
 	</div> <!--SoftwareProvidersLogInAndSignUp ends-->
@@ -46,17 +45,12 @@
       <hr/>
       <div>© 2023 Copyright</div>
     </footer>
-
-	<script>
-		document.querySelector('.LoginButtonForSOftwareProver').addEventListener('click', function() {
-			window.location.href = "Software Provider's Dashboard.html";
-		});
-
-		document.querySelector('.SignUpButtonForSOftwareProver').addEventListener('click', function() {
-			window.location.href = "Software Provider's Dashboard.html";
-		});
-	</script>
 	
 	<!--Footer Ends-->
+	
+	<script>
+		
+	</script>
+
 </body>
 </html>

@@ -33,173 +33,24 @@
 					<th>Send Promo</th>
 				</tr>
 			</thead>
-
 			<tbody>
-				<tr>
-					<td>Abcd</td>
-					<td>2132165</td>
+				<% purchases.forEach(purchase => { %>
+				  <tr>
+					<td><%= purchase.purchase_id %></td>
+					<td><%= purchase.client_id %></td>
+					<td><%= purchase.product_id %></td>
 					<td>2023-09-15</td>
-					<td>2023-10-15</td>
 					<td>
 						<button id = "button" class = "remind-btn">Remind</button>
 						<button id = "button" class = "send-promo-btn">Send Promo</button>
 						<button id = "button" class="enable-disable toggle-button"></button>
 					</td>
-					<td></td>
-					<td>Active✅</td>
+					<td><%= purchase.expiry_date %></td>
+					<td><%= purchase.provider_id %></td>
 					<td><input type="checkbox" class="reminder-checkbox"></td>
 					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- row 1 ends here-->
-
-				<tr>
-					<td> Efgh </td>
-					<td> 2184169 </td>
-					<td> 2023-07-15 </td>
-					<td> 2024-07-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-					</tr> <!-- row 2 ends here -->
-				</tr> <!--Row 2 ends here-->
-		
-				<tr>
-					<td> Ijkl </td>
-					<td> 9874512 </td>
-					<td> 2023-06-15 </td>
-					<td> 2023-06-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 3 ends here -->
-		
-				<tr>
-					<td> Mnop </td>
-					<td> 5132486 </td>
-					<td> 2023-08-15 </td>
-					<td> 2024-08-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-
-				</tr> <!-- Row 4 ends here -->
-		
-				<tr>
-					<td> Qrst </td>
-					<td> 51235487 </td>
-					<td> 2023-09-15 </td>
-					<td> 2024-09-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 5 ends here -->
-		
-				<tr>
-					<td> Wxyz </td>
-					<td> 4681245 </td>
-					<td> 2023-10-15 </td>
-					<td> 2023-10-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 6 ends here -->
-		
-				<tr>
-					<td> ASDF </td>
-					<td> 1234584 </td>
-					<td> 2023-11-15 </td>
-					<td> 2023-11-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 7 ends here -->
-		
-				<tr>
-					<td> GHJK </td>
-					<td> 2356745 </td>
-					<td> 2023-12-15 </td>
-					<td> 2023-12-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 8 ends here -->
-		
-				<tr>
-					<td> QWER </td>
-					<td> 1232451 </td>
-					<td> 2024-01-15 </td>
-					<td> 2024-01-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 9 ends here -->
-		
-				<tr>
-					<td> TYUI </td>
-					<td> 8874519 </td>
-					<td> 2023-09-15 </td>
-					<td> 2023-09-15 </td>
-					<td>
-						<button id = "button" class="remind-btn">Remind</button>
-						<button id = "button" class="send-promo-btn">Send Promo</button>
-						<button id = "button" class="enable-disable toggle-button"></button>
-					</td>
-					<td></td>
-					<td>Active✅</td>
-					<td><input type="checkbox" class="reminder-checkbox"></td>
-					<td><input type="checkbox" class="promo-checkbox"></td>
-				</tr> <!-- Row 10 ends here -->
-		
-
-			</tbody>
-
+				  </tr>
+				<% }); %>
 		</table>
 	</div>
 
@@ -210,7 +61,13 @@
 		<div>© 2023 Copyright</div>
 	</footer>
 
-	<script src="Software providers Customers Table.js"></script>
+	<script src="Software providers Customers Table.js">
+		fetch('http://localhost:3000/purchases')
+		.then(response => response.json())
+		.then(data => console.log(data))
+		.catch(error => console.error('Error:', error));
+
+	</script>
 </body>
 
 </html>

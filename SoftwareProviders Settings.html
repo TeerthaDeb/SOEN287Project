@@ -28,22 +28,22 @@
                             <input type="password" id="newPassword" required><br><br>
                             <label for="confirmNewPassword">Confirm New Password:</label>
                             <input type="password" id="confirmNewPassword" required><br><br>
-                            <button type="submit">Save Changes</button>
+                            <button type="submit" onclick="changePassword(event)">Save Changes</button>
                         </form>
                     </div>
                 </li>
 
                 <li>
                     <div id="changeProduct" class="tab-pane">
-                        <h2>Change Product Details : </h2>
+                        <h2>Change ProductDetails : </h2>
                         <form id="Change Product">
-                            <label for="Name">Name:</label>
-                            <input type = "text" id = "Product Name"><br><br>
-                            <label for="Product Details">Product Details</label>
-                            <input type="text" id="Product Details" ><br><br>
-                            <label for="Price">Price:</label>
-                            <input type="number" id="Price">$<br><br>
-                            <button type="submit">Save Changes</button>
+                            <label for="productName">Name:</label>
+                            <input type="text" id="productNameChange"><br><br>
+                            <label for="productDetails">Product Details:</label>
+                            <input type="text" id="productDetailsChange"><br><br>
+                            <label for="price">Price:</label>
+                            <input type="number" id="priceChange" step="0.01">$<br><br>
+                            <button type="submit" onclick="changeProductDetails(event)">Save Changes</button>
                         </form>
                     </div>
                 </li>
@@ -51,14 +51,13 @@
                 <li>
                     <div id="CreateProduct" class="tab-pane">
                         <h2>Create Product : </h2>
-                        <form id="Create Product">
+                        <form id="createProductForm">
                             <label for="Name">Name:</label>
-                            <input type = "text" id = "Product Name" required><br><br>
-                            <label for="Product Details">Product Details</label>
-                            <input type="text" id="Product Details" required><br><br>
-                            <label for="Price">Price:</label>
-                            <input type="number" id="Price" required>$<br><br>
-                            <button type="submit">Save Changes</button>
+                            <input type = "text" id = "createProductName" required><br><br>
+                            <label for="createProductDetails">ProductDetails</label>
+                            <input type="text" id="createProductDetails" required><br><br>
+                            <input type="number" id="createPrice" step="0.01" required>$<br><br>
+                            <button type="submit" onclick="createProduct(event)">Save Changes</button>
                         </form>
                     </div>
                 </li>
@@ -73,12 +72,12 @@
                                 <option value="product3">Product 3</option>
                                 <option value="product4">Product 4</option>
                             </select>
-                            <button type="submit">Remove Item</button>
+                            <button type="submit" onclick = "removeItem(event)">Remove Item</button>
                         </form>
                     </div>
                 </li>
 
-                <li>
+                <!-- <li>
                     <div id="Change Company Details" class="tab-pane">
                     <h2>Change Company Details:</h2>
                     <form id="ChangeCompanyDetails">
@@ -90,7 +89,7 @@
                         <input type="tel" id="phoneNumber"><br><br>
                         <button type="submit">Save Changes</button>
                     </form>
-                </li>
+                </li> -->
             </ol>
     </div>
 
@@ -101,18 +100,174 @@
     </footer>
 
     <script>
+
         // Function to display details when a product is selected
         function displayDetails() {
             var selectedProduct = document.getElementById("productList").value;
             alert("You have selected: " + selectedProduct);
         }
-    
+
         // Function to remove the selected product
-        function removeItem() {
+        function removeItem(event) {
+            event.preventDefault(); // Prevent default form submission
+
             var selectedProduct = document.getElementById("productList").value;
-            alert("You have removed: " + selectedProduct);
-            document.getElementById("productList").remove(document.getElementById("productList").selectedIndex);
+
+            // Send an AJAX request to your server to remove the selected product
+            fetch('/removeProduct', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ productId: selectedProduct }),
+            })
+            .then((response) => {
+                if (response.ok) {
+                    alert('Product removed successfully!');
+                    // You can perform additional actions here after successful removal
+                } else {
+                    throw new Error('Product removal failed!');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Product removal failed!');
+            });
         }
+
+        function createProduct(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve form data
+            const productName = document.getElementById('createProductName').value;
+            const productDetails = document.getElementById('createProductDetails').value;
+            const price = document.getElementById('createPrice').value;
+
+            // Prepare the data to send to the server
+            const formData = {
+                productName,
+                productDetails,
+                price,
+            };
+
+            // Send an AJAX request to your server
+            fetch('/createProduct', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        alert('Product created successfully!:' ,  productName , productDetails , price);
+                        // You can perform additional actions here after successful creation
+                    } else {
+                        throw new Error('Product creation failed!');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Product creation failed!');
+                });
+        }
+
+        function changePassword(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve form data
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+
+            // Check if passwords match
+            if (newPassword !== confirmNewPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Prepare the data to send to the server
+            const formData = {
+                newPassword,
+            };
+
+            // Send an AJAX request to your server
+            fetch('/changePassword', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then((response) => {
+                if (response.ok) {
+                    alert('Password changed successfully!');
+                    // You can perform additional actions here after successful password change
+                } else {
+                    throw new Error('Password change failed!');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Password change failed!');
+            });
+        }
+
+        function changeProductDetails(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve form data
+            const productName = document.getElementById('productNameChange').value;
+            const productDetails = document.getElementById('productDetailsChange').value;
+            const price = document.getElementById('priceChange').value;
+
+            // Prepare the data to send to the server
+            const formData = {
+                productName,
+                productDetails,
+                price,
+            };
+
+            // Send an AJAX request to your server to update the product details
+            fetch('/updateProductDetails', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then((response) => {
+                if (response.ok) {
+                    alert('Product details updated successfully!');
+                } else {
+                    throw new Error('Product details update failed!');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Product details update failed!');
+            });
+        }
+
+
+        fetch('/fetchProducts')
+        .then((response) => response.json())
+        .then((data) => {
+            // Use data to populate the delete product list
+            const productList = document.getElementById('productList');
+
+            // Clear existing options
+            productList.innerHTML = '';
+
+            // Add fetched products as options
+            data.forEach((product) => {
+                const option = document.createElement('option');
+                option.value = product.product_id; // Set the value to the product's ID
+                option.textContent = product.product_name; // Set the text to the product's name
+                productList.appendChild(option);
+            });
+        })
+        .catch((error) => console.error('Error fetching products:', error));
+
     </script>
 
 </body>

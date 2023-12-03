@@ -54,10 +54,6 @@
             <label for="payment-paypal">PayPal</label>
         </div>
         <div class="form-group">
-            <label for="promo-code">Promo Code:</label>
-            <input type="text" id="promo-code" name="promo-code">
-        </div>
-        <div class="form-group">
             <label for="subscription-type">Subscription Type:</label>
             <select id="subscription-type" name="subscription-type" required>
                 <option value="Yearly">Yearly</option>
@@ -74,6 +70,59 @@
         <hr />
         <div>© 2023 Copyright</div>
     </footer>
+
+    <script>
+        function createCustomerAndPurchase(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Retrieve form data
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        const product = document.getElementById('product').value;
+        const subscription_type = document.getElementById('subscription-type').value;
+
+        // Prepare the data to send to the server
+        const formData = {
+            firstName,
+            lastName,
+            email,
+            address,
+            product,
+            subscription_type,
+            // ... (other form fields)
+        };
+
+        // Send an AJAX request to your server
+        fetch('/createCustomerAndPurchase', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((response) => {
+            if (response.ok) {
+                alert('Customer and purchase created successfully!');
+                // You can perform additional actions here after successful creation
+            } else {
+                throw new Error('Customer and purchase creation failed!');
+            }
+            })
+            .catch((error) => {
+            console.error('Error:', error);
+            alert('Customer and purchase creation failed!');
+            });
+        }
+
+        document.getElementById('CreateCustomerSubmit').addEventListener('click', function() {
+        const clientId = 
+        document.getElementById('clientId').value = clientId;
+        createCustomerAndPurchase(event);
+        });
+    </script>
+  
     
 </body>
 

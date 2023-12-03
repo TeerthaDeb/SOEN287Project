@@ -5,7 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Provider Dashboard</title>
-    <link rel="stylesheet" href="Software Provider's Dashboard.CSS">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            box-shadow: 0 0 10px inset rgb(0, 0, 0);
+        }
+    
+        li {
+            float: left;
+        }
+    
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    
+        li a.active {
+            color: white;
+            background-color: whitesmoke;
+        }
+    
+        li a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    
+        #Home_button {
+            color: #090909;
+            font-size: 18px;
+            border-radius: 5px;
+            background: whitesmoke;
+            border: 1px solid whitesmoke;
+            transition: all .3s;
+            box-shadow: 0 0 10px inset black;
+        }
+    
+        body {
+            background-image: url("https://removal.ai/wp-content/uploads/2021/09/black-background-04-coolbackgrounds.png");
+        }
+    
+    
+    
+    
+        #button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            height: 50px;
+            background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+            border-radius: 30px;
+            border: 1px solid #8F9092;
+            transition: all 0.2s ease;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #606060;
+            text-shadow: 0 1px #fff;
+            margin: 5px;
+            display: inline-block;
+        }
+    
+        #button:hover {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+        }
+    
+        #button:active {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+        }
+    
+        #button:focus {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+        }
+    
+    
+    
+    
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            background-color: whitesmoke;
+            padding: 14px 16px;
+            font-size: 18px;
+            box-shadow: 0 0 10px inset black;
+            text-align: center;
+            height: 120px;
+        }
+    
+    
+        .links {
+            padding: 10px;
+            color: #090909;
+        }
+    
+        main {
+            margin-top: 200px;
+            height: 10px;
+        }
+    
+    
+        .SignOut {
+            margin-left: 80% !important;
+        }
+    
+        .ProviderName {
+            margin-top: 80px;
+            background-color: white;
+            width: 97%;
+            border-radius: 30px;
+            padding: 10px;
+            position: absolute;
+            top: 40px;
+            text-align: center;
+            justify-self: center;
+        }
+    
+        .customer-info {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 30px;
+        }
+    
+        header {
+            display: flex;
+            justify-content: center;
+            background-color: whitesmoke;
+            padding: 10px 20px;
+            box-shadow: 0 0 10px inset black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -23,16 +170,26 @@
 
     <h1>Dashboard</h1>
     <div class = ProviderName>
-        <p><h3>Hello [Software Provider]</h3></p>
+        <p><h3>Hello <%= providerName %>!</h3></p>
         <p>Your Stats Below:</p>
     </div>
     
     <main>
-        <div class ="customer-info">
+        <!-- <div class ="customer-info">
             <p> <h2>Dashboard Info </h2> </p>
             <p>Existing Customers: <span id="existing-customers">9</span></p>
             <p>Expiring in a Month: <span id="expiring-customers">1</span></p>
             <p>Expired Customers: <span id="expired-customers">4</span></p>
+        </div> -->
+        <div class="providers">
+            <% providerData.forEach(provider => { %>
+                <div class="provider-info">
+                    <p>Provider ID: <%= provider.provider_id %></p>
+                    <p>Name: <%= provider.provider_name %></p>
+                    <p>Email: <%= provider.email %></p>
+                    <!-- Add more details as needed -->
+                </div>
+            <% }); %>
         </div>
     </main>
 
