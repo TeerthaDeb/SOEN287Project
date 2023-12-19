@@ -103,6 +103,62 @@
     <hr />
     <div>© 2023 Copyright</div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+
+            // Retrieve data from the URL of the previous page (CreateCustomers.html)
+            const urlParams = new URLSearchParams(window.location.search);
+            const firstName = urlParams.get('first-name');
+            const lastName = urlParams.get('last-name');
+            const email = urlParams.get('email');
+            const address = urlParams.get('address');
+            const product = urlParams.get('product');
+            const subscriptionType = urlParams.get('subscription-type');
+
+            // Construct the payment confirmation data
+            const paymentConfirmationData = {
+                firstName,
+                lastName,
+                email,
+                address,
+                product,
+                subscriptionType,
+                paymentStatus: 'confirmed' // You can add additional details or flags related to payment status
+            };
+
+            // Directly proceed without authentication (simplified demo)
+            sendPaymentConfirmation(paymentConfirmationData);
+        });
+    });
+
+    function sendPaymentConfirmation(paymentConfirmationData) {
+        // Simulate sending payment confirmation data to the server
+        fetch('/handlePaymentConfirmation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(paymentConfirmationData),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Payment confirmed!'); // Replace this with your desired action upon successful payment
+            } else {
+                alert('Payment confirmation failed!');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Payment confirmation failed!');
+        });
+    }
+</script>
+
     
 </body>
 </html>
